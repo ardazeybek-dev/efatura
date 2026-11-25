@@ -192,6 +192,20 @@ from the latest e-Fatura package and run `python scripts/build_codes.py`.
 * Invoice-level `LineExtensionAmount` is larger than the sum of lines → it is the pre-discount sum, with line discounts in `AllowanceTotalAmount` → accept both conventions.
 * `import efatura` picks up the wrong package on Windows → the unrelated `efatura` package installs `eFatura`, and the filesystem ignores case → this package is imported as `efatura_tr`.
 
+## Türkiye toolkit
+
+Part of a small set of tools for the Turkish data that general-purpose libraries get wrong:
+
+| Package | What it does | Install |
+| --- | --- | --- |
+| [trkit](https://github.com/ardazeybek-dev/trkit) | Turkish casing (`i` → `İ`), slugify, TCKN, IBAN and plate validation · Python + CLI | `pip install trkit` |
+| [trkit-js](https://github.com/ardazeybek-dev/trkit-js) | The same for JavaScript, plus VKN, phone numbers and Zod schemas | `npm install @ardazeybek-dev/trkit` |
+| [kvkk](https://github.com/ardazeybek-dev/kvkk) | Finds and masks Turkish personal data in files, logs and dumps | `pip install kvkk` |
+| [ekstre](https://github.com/ardazeybek-dev/ekstre) | Turkish bank statement exports (.xlsx, .xls, .csv) into typed transactions | `pip install ekstre` |
+| [adres-tr](https://github.com/ardazeybek-dev/adres) | Free-form Turkish addresses into province, district, neighbourhood, street… | `pip install adres-tr` |
+| [isgunu](https://github.com/ardazeybek-dev/isgunu) | Public holidays, arife half days and business-day arithmetic · Python + JS | `pip install isgunu` |
+| [bordro](https://github.com/ardazeybek-dev/bordro) | Payroll: gross ↔ net with the cumulative income tax · TypeScript | `npm install bordro` |
+
 ## License
 
 MIT. The sample invoices in `tests/fixtures/gib/` and the code list in
